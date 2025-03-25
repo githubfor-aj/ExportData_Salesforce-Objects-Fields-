@@ -1,0 +1,51 @@
+/* Root Container Styling */
+.export-card {
+    font-family: 'Verdana', sans-serif;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Padding and Alignment */
+.container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Full-Width Inputs */
+.full-width {
+    width: 100%;
+}
+
+/* Dual Listbox Customization */
+lightning-dual-listbox {
+    --slds-c-dual-listbox-height: 200px; /* Adjust height */
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Styling for Export Button */
+lightning-button {
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Export Job ID Display */
+.job-id {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0070d2;
+    text-align: center;
+    background-color: #f1faff;
+    padding: 8px;
+    border-radius: 6px;
+    display: inline-block;
+}
