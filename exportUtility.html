@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Export Utility" class="export-card">
+        <div class="container">
+
+            <!-- Object Selection -->
+            <lightning-combobox 
+                label="Select Object"
+                value={selectedObject}
+                options={objectOptions}
+                onchange={handleObjectChange}
+                class="full-width">
+            </lightning-combobox>
+
+            <!-- Dual-Listbox for Field Selection -->
+            <lightning-dual-listbox 
+                label="Select Fields"
+                source-label="Available Fields"
+                selected-label="Selected Fields"
+                options={fieldOptions}  
+                value={selectedFields}
+                onchange={handleFieldChange}
+                required>
+            </lightning-dual-listbox>
+
+            <!-- Export Button -->
+            <div class="button-container">
+                <lightning-button label="Export Data" onclick={handleExport} variant="brand"></lightning-button>
+            </div>
+
+            <!-- Export Job ID Display -->
+            <template if:true={exportJobId}>
+                <p class="job-id">Export Job ID: {exportJobId}</p>
+                <p class="job-id"> Job Status: {jobStatus} </p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>
